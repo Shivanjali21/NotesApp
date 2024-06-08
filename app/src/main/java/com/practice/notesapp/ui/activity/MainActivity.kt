@@ -1,6 +1,5 @@
 package com.practice.notesapp.ui.activity
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
@@ -26,6 +25,4 @@ class MainActivity : AppCompatActivity() {
         val navHost = supportFragmentManager.findFragmentById(R.id.mainFCV) as NavHost
         navController = navHost.navController
     }
-
-
 }

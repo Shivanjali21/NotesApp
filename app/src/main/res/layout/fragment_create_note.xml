@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBg"
+    tools:context=".ui.fragment.CreateNoteFragment">
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/title"
+        android:textColorHint="#D1D1D1"
+        android:textColor="@color/colorWhite"
+        android:textSize="18sp"
+        android:padding="10dp"
+        android:layout_margin="10dp"
+        android:maxLines="1"
+        android:background="@drawable/edit_text_shape"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etSubTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/sub_title"
+        android:textSize="18sp"
+        android:padding="10dp"
+        android:layout_margin="10dp"
+        android:textColorHint="#D1D1D1"
+        android:textColor="@color/colorWhite"
+        android:background="@drawable/edit_text_shape"
+        app:layout_constraintTop_toBottomOf="@id/etTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clPriority"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:layout_constraintTop_toBottomOf="@id/etSubTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivGreenDot"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:background="@drawable/green_dot"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivYellowDot"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:background="@drawable/yellow_dot"
+            android:layout_marginHorizontal="10dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ivGreenDot"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivRedDot"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_marginHorizontal="10dp"
+            android:background="@drawable/red_dot"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ivYellowDot"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etNotes"
+        android:layout_width="match_parent"
+        android:layout_height="360dp"
+        android:hint="@string/notes"
+        android:textSize="18sp"
+        android:padding="10dp"
+        android:gravity="start"
+        android:maxLines="1"
+        android:layout_margin="10dp"
+        android:textColorHint="#D1D1D1"
+        android:textColor="@color/colorWhite"
+        android:background="@drawable/edit_text_shape"
+        app:layout_constraintTop_toBottomOf="@id/clPriority"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_check"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        app:elevation="8dp"
+        app:borderWidth="0dp"
+        android:backgroundTint="@color/colorRed"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:contentDescription="@string/app_name"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

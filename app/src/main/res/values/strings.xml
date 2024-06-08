@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Notes App</string>
+    <string name="splash_subtitle_text">Life is too fast don\'t forget anything</string>
+    <string name="title">Title</string>
+    <string name="notes">Notes..</string>
+    <string name="sub_title">Sub Title</string>
+    <string name="high">High</string>
+    <string name="medium">Medium</string>
+    <string name="low">Low</string>
+    <string name="delete_menu">Delete</string>
+    <string name="search">Search</string>
+</resources>
